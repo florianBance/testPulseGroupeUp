@@ -24,6 +24,6 @@ class RootController extends BaseController
      */
     public function homepage()
     {
-        return $this->redirectToRoute('contact_list');
+        return $this->redirectToRoute('detailsCart');
     }
 }

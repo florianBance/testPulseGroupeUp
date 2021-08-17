@@ -31,6 +31,10 @@ http://127.0.0.1:8000
  composer update
  ```
 Créer la base de donnée
+la chaine de connexion a la BDD ce trouve dans le fichier .env.local
+ ```
+ DATABASE_URL="mysql://root:@127.0.0.1:3306/testTechFb?serverVersion=10.4.10-MariaDB"
+ ```
  ```
  php bin/console doctrine:database:create
  ```

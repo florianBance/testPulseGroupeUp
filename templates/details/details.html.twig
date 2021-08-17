@@ -1,0 +1,40 @@
+{% extends 'content_base.html.twig' %}
+{% block title %}
+    {% trans %}Details pour les contacts{% endtrans %}
+{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/theme.bootstrap_4.min.css') }}">
+{% endblock%}
+{% block content_body %}
+    Periode 1 = du 01/01/2021 au 30/04/2021,<br/>
+    Periode 2 = du 01/05/2021 au 31/08/2021,<br/>
+    Periode 3 = du 01/10/2021 au 31/12/2021.<br/><br/>
+    {% for key,detailsContact in detailsContacts %}
+        {{ key }}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>{% trans %}Période{% endtrans %}</th>
+            <th>{% trans %}Points{% endtrans %}</th>
+            <th>{% trans %}Euros{% endtrans %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key,detailPeriod in detailsContact %}
+            <tr>
+                <td>
+                    periode {{ key }}
+                </td>
+                <td>{{ detailPeriod }}</td>
+                <td>{{ detailPeriod*constant('App\\Controller\\FidelityController::POINTVALUE') }}€</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

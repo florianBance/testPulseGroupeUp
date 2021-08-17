@@ -1,0 +1,56 @@
+{% extends 'content_base.html.twig' %}
+{% block title %}
+    {% trans %}Contact{% endtrans %}
+{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/theme.bootstrap_4.min.css') }}">
+{% endblock%}
+{% block content_body %}
+    <div class="button-container">
+        <a href="{{ path('contact_new') }}" class="btn btn-general btn-general-secondary mt-3 mb-3 mx-auto ">{% trans %}Ajouter{% endtrans %}
+            <span class="float-right pictoContainer">
+                <i class="bi bi-plus-square"></i>
+            </span>
+        </a>
+    </div>
+    <table class="table table-hover" id="allformationLocation">
+        <thead>
+        <tr>
+            <th>{% trans %}id{% endtrans %}</th>
+            <th>{% trans %}Email{% endtrans %}</th>
+            <th>{% trans %}Prénom{% endtrans %}</th>
+            <th>{% trans %}Nom{% endtrans %}</th>
+            <th class="actions">{% trans %}Actions{% endtrans %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>
+                    {{ contact.id }}
+                </td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.lastName }}</td>
+                <td>
+                    <a class="tableButton"  title="{% trans %}Editer{% endtrans %}" href="{{ path('contact_edit',{"id": contact.id}) }}">
+                        <span class="pictoContainer">
+                            <i class="bi bi-pencil-square"></i>
+                        </span>
+                    </a>
+                    <a class="tableButton" title="{% trans %}Supprimer{% endtrans %}" href="{{ path('contact_delete',{"id": contact.id}) }}" onclick="return confirm('{% trans %}Etes-vous sûr de vouloir supprimer ce contact ?{% endtrans %}');">
+                        <span class="pictoContainer">
+                            <i class="bi bi-trash"></i>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

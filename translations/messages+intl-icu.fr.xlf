@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="lfWJglB" resname="contact_created">
+        <source>contact_created</source>
+        <target>Contact créé</target>
+      </trans-unit>
+      <trans-unit id="nxaqfAo" resname="contact_updated_success_message">
+        <source>contact_updated_success_message</source>
+        <target>Contact mis à jour</target>
+      </trans-unit>
+      <trans-unit id="nY7YOjn" resname="success_message_contact_deleted">
+        <source>success_message_contact_deleted</source>
+        <target>Contact Supprimmé</target>
+      </trans-unit>
+      <trans-unit id="x3Pc7d7" resname="Liste des contacts">
+        <source>Liste des contacts</source>
+        <target>Liste des contacts</target>
+      </trans-unit>
+      <trans-unit id="pXybUXS" resname="Ajouter un contact">
+        <source>Ajouter un contact</source>
+        <target>Ajouter un contact</target>
+      </trans-unit>
+      <trans-unit id="CRfeRZ9" resname="Editer un type de formation">
+        <source>Editer un type de formation</source>
+        <target>Editer un type de formation</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="APnFM0V" resname="Ajouter">
+        <source>Ajouter</source>
+        <target>Ajouter</target>
+      </trans-unit>
+      <trans-unit id="pWFFJwz" resname="id">
+        <source>id</source>
+        <target>id</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="4yW.j5A" resname="Prénom">
+        <source>Prénom</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="ssEkU20" resname="Nom">
+        <source>Nom</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="IumSuye" resname="Editer">
+        <source>Editer</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="Xl0CFs4" resname="Supprimer">
+        <source>Supprimer</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="yhRhB4f" resname="Etes-vous sûr de vouloir supprimer ce contact ?">
+        <source>Etes-vous sûr de vouloir supprimer ce contact ?</source>
+        <target>Etes-vous sûr de vouloir supprimer ce contact ?</target>
+      </trans-unit>
+      <trans-unit id="FECHJTU" resname="Créer un nouveau contact">
+        <source>Créer un nouveau contact</source>
+        <target>Créer un nouveau contact</target>
+      </trans-unit>
+      <trans-unit id="Rq05Fva" resname="Annuler">
+        <source>Annuler</source>
+        <target>Annuler</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,26 @@
+{% extends 'content_base.html.twig' %}
+{% block title %}
+    {% trans %}Créer un nouveau contact{% endtrans %}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+{% endblock %}
+{% block content_body %}
+
+
+        {{ include('contact/_form.html.twig',{
+            button_text: 'Sauvegarder'
+        }) }}
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var msg="<span class=\"invalid-feedback d-block\"><span class=\"d-block\"><span class=\"form-error-icon badge badge-danger text-uppercase\">{% trans from 'validators' %}error{% endtrans %}</span> " +
+            "<span class=\"form-error-message\">{% trans from 'validators' %}Cette valeur ne doit pas être vide.{% endtrans %}</span></span></span>";
+        var msg_email_novalid="<span class=\"invalid-feedback d-block\"><span class=\"d-block\"><span class=\"form-error-icon badge badge-danger text-uppercase\">{% trans from 'validators' %}error{% endtrans %}</span> " +
+            "<span class=\"form-error-message\">{% trans from 'validators' %}Le format de l'email n'est pas correct{% endtrans %}</span>";
+    </script>
+    <script src="{{ asset('js/contact_form.js') }}"></script>
+{% endblock %}

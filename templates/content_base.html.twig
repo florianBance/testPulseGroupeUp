@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('warning') %}
+            <div class="alert alert-warning">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for msg in app.session.flashbag.get('notice') %}
+            <div class="alert alert-{{ msg.type }}">
+                {% if msg.message1 is not null %} {{ msg.message1 }}  {% endif %}
+                {% if msg.message2 is not null %} <br />{{ msg.message2 }}  {% endif %}
+                {% if msg.message3 is not null %} <br />{{ msg.message3 }}  {% endif %}
+            </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="{% block content_class %}show-article-container p-3 mt-4{% endblock %}">
+                    {% block content_body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
